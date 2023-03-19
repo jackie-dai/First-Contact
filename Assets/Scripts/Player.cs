@@ -7,10 +7,16 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private float movementSpeed = 10f;
-    // Start is called before the first frame update
-    void Start()
+
+    private SpriteRenderer spriteRenderer;
+    #region Animation
+    private Animator animationController;
+    #endregion
+
+    void Awake()
     {
-        
+        animationController = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -26,5 +32,24 @@ public class Player : MonoBehaviour
         
         Vector2 direction = new Vector2(inputX, inputY);
         transform.Translate(direction * Time.deltaTime * movementSpeed);
+        
+        animationController.SetFloat("SpeedX", inputX);
+        animationController.SetFloat("SpeedY", inputY);
+        if (inputX != 0 || inputY != 0)
+        {
+
+            animationController.SetBool("Walking", true);
+        } else
+        {
+            animationController.SetBool("Walking", false);
+        }
+        if (inputX > 0)
+        {
+            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+        }
     } 
 }
