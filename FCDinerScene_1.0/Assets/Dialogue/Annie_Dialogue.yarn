@@ -1,0 +1,94 @@
+title: Start
+tags:
+---
+<<if getDisguiseCode() == 0>>
+    <<jump Default>>
+<<endif>>
+<<if getDisguiseCode() == 1>>
+    <<jump Boy>>
+<<endif>>
+<<if getDisguiseCode() == 2>>
+    <<jump Goat>>
+<<endif>>
+===
+
+title: Default
+tags:
+---
+Cosmo: Hello, owner of the diner!
+Annie: Hello! We don't get a lot of newcomers in town, what's your name?
+-> A serious introduction
+    <<jump FormalIntro>>
+-> Make something up
+    <<jump MakeSomethingUp>>
+-> Be defensive
+    <<jump BeingDefensive>>
+===
+
+title: FormalIntro
+---
+Cosmo: I'm Cosmo, an Extraterrestrial from System B3-0ND!
+    <<jump NameCosmo>>
+===
+
+title: MakeSomethingUp
+---
+Cosmo: Uhh... Dave?
+Annie: Are you sure? 'Caus you don't sound so certain
+-> Sure
+    <<jump SureDave>>
+-> Not Sure
+    <<jump NotSureDave>>
+===
+title: SureDave
+---
+Cosmo: Yes! my name is Dave
+    <<jump NameDave>>
+===
+title: NotSureDave
+---
+Cosmo: No... It's actually Cosmo
+Cosmo: I'm an Extraterrestrial from System B3-0ND
+    <<jump NameCosmo>>
+===
+
+title: BeingDefensive
+---
+Cosmo: You answer first!
+Annie: My name is Annie Applepie, now how may I call you?
+-> Make something up
+    <<jump MakeSomethingUp>>
+-> Honest answer
+    <<jump FormalIntro>>
+===
+
+title: NameCosmo
+---
+Annie: Hello Cosmo, I don't know that place but I'm sure it's wonderful!
+Annie: Now, what can I get you?
+===
+
+title: NameDave
+---
+Annie: OK, Dave... What can I get you?
+===
+
+title: Boy
+---
+Cosmo(in boy): Hello, owner of the diner!
+Annie: Oh Hello, kid! 
+Annie: We don't get a lot of newcomers in town, what's your name?
+-> Cosmo
+    Cosmo: I'm Cosmo, an Extraterrestrial from System B3-0ND!
+    Annie: Awww how cute!
+    Annie: What can I get you today?
+-> Make Something up
+    Cosmo: Uhh... Mike?
+    Annie: Hi Mike, I'm Annie Applepie, how can I help you today?
+===
+
+title: Goat
+---
+Cosmo(in goat): Hello, owner of the diner!
+Annie: Oh my god, the goat is talking!
+===
