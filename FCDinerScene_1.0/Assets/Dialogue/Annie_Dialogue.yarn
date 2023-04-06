@@ -1,6 +1,7 @@
 title: Start
 tags:
 ---
+Annie: Welcome to Skates n' Shakes! What can I get for you?
 <<if getDisguiseCode() == 0>>
     <<jump Default>>
 <<endif>>
@@ -15,80 +16,51 @@ tags:
 title: Default
 tags:
 ---
-Cosmo: Hello, owner of the diner!
-Annie: Hello! We don't get a lot of newcomers in town, what's your name?
--> A serious introduction
-    <<jump FormalIntro>>
--> Make something up
-    <<jump MakeSomethingUp>>
--> Be defensive
-    <<jump BeingDefensive>>
-===
-
-title: FormalIntro
----
-Cosmo: I'm Cosmo, an Extraterrestrial from System B3-0ND!
-    <<jump NameCosmo>>
-===
-
-title: MakeSomethingUp
----
-Cosmo: Uhh... Dave?
-Annie: Are you sure? 'Caus you don't sound so certain
--> Sure
-    <<jump SureDave>>
--> Not Sure
-    <<jump NotSureDave>>
-===
-title: SureDave
----
-Cosmo: Yes! my name is Dave
-    <<jump NameDave>>
-===
-title: NotSureDave
----
-Cosmo: No... It's actually Cosmo
-Cosmo: I'm an Extraterrestrial from System B3-0ND
-    <<jump NameCosmo>>
-===
-
-title: BeingDefensive
----
-Cosmo: You answer first!
-Annie: My name is Annie Applepie, now how may I call you?
--> Make something up
-    <<jump MakeSomethingUp>>
--> Honest answer
-    <<jump FormalIntro>>
-===
-
-title: NameCosmo
----
-Annie: Hello Cosmo, I don't know that place but I'm sure it's wonderful!
-Annie: Now, what can I get you?
-===
-
-title: NameDave
----
-Annie: OK, Dave... What can I get you?
+Annie: Oh -um... nice costume?
+-> Play along carefully
+    Cosmo: Thank you! I made it myself.
+-> Play along casually
+    Cosmo: Thanks! You too
+    Annie: ...Right. Let me grab a menu for you.
+    <<jump Menu>>
+-> Reveal yourself
+    Cosmo: This isn't a costume!
+    Cosmo: I'm Cosmo, an extraterrestrial from B3-0ND!
+    Annie: ...Right. Let me grab a menu for you.
+    <<jump Menu>>
 ===
 
 title: Boy
 ---
-Cosmo(in boy): Hello, owner of the diner!
-Annie: Oh Hello, kid! 
-Annie: We don't get a lot of newcomers in town, what's your name?
--> Cosmo
-    Cosmo: I'm Cosmo, an Extraterrestrial from System B3-0ND!
-    Annie: Awww how cute!
-    Annie: What can I get you today?
--> Make Something up
-    Cosmo: Uhh... Mike?
-    Annie: Hi Mike, I'm Annie Applepie, how can I help you today?
+<<jump FreeMenu>>
 ===
 
 title: Goat
 ---
-Cosmo(in goat): Hello, owner of the diner!
-Annie: Oh my god, the goat is talking!
+Annie: Oh-
+Annie: Hey there little guy!
+Annie: Well, I huess you do qualify for our "Kids Eat Free" promotion.
+Annie: ...what do goats eat? O think I've seen one eat a fence.
+Annie: Hey, here's a tin can! Thanks for coming!
+-> Take the tin can and leave
+-> Reveal yourself
+    Annie: I'm not a goat! I'm Cosmo, an extraterrestrial from B3-0ND!
+===
+
+title: Menu
+---
+-> Burger - $$$
+-> Fries - $$
+-> Milkshake - $
+-> Water - free
+-> No thanks
+===
+
+title: FreeMenu
+---
+-> Burger - free!
+-> Fries - free!
+-> Milkshake - free!
+-> Water - free!
+-> No thanks
 ===

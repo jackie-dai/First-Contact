@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Junkyard.unity
     guid: d5f4cb2ba50aa4c44a25f1d27a762700
+  - enabled: 1
+    path: Assets/Scenes/dinerOutside.unity
+    guid: f988ec624deaa984f9340dba63dd122e
+  - enabled: 1
+    path: Assets/Scenes/dialogue.unity
+    guid: e51d7889f623e704daabacfd53983736
+  - enabled: 1
+    path: Assets/Scenes/Disguise.unity
+    guid: f12cb7fc3aadb964e99b378fbe543336
   m_configObjects: {}
