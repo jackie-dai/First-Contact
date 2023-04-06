@@ -33,6 +33,10 @@ public class EnlargeHover : MonoBehaviour
         {
             SceneManager.LoadScene("Junkyard");
         }
+        if (transform.tag == "diner")
+        {
+            SceneManager.LoadScene("dinerOutside");
+        }
         Debug.Log("SDF");
     }
 

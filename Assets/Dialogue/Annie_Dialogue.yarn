@@ -1,0 +1,72 @@
+title: Start
+tags:
+---
+Annie: Welcome to Skates n' Shakes! What can I get for you?
+<<if getDisguiseCode() == 0>>
+    <<jump Default>>
+<<endif>>
+<<if getDisguiseCode() == 1>>
+    <<jump Boy>>
+<<endif>>
+<<if getDisguiseCode() == 2>>
+    <<jump Goat>>
+<<endif>>
+===
+
+title: Default
+tags:
+---
+<<setFaceCode 1>>
+Annie: Oh -um... nice costume?
+-> Play along carefully
+    Cosmo: Thank you! I made it myself.
+-> Play along casually
+    Cosmo: Thanks! You too
+    Annie: ...Right. Let me grab a menu for you.
+    <<jump Menu>>
+-> Reveal yourself
+    Cosmo: This isn't a costume!
+    Cosmo: I'm Cosmo, an extraterrestrial from B3-0ND!
+    Annie: ...Right. Let me grab a menu for you.
+    <<jump Menu>>
+===
+
+title: Boy
+---
+<<jump FreeMenu>>
+===
+
+title: Goat
+---
+<<setFaceCode 1>>
+Annie: Oh-
+<<setFaceCode 3>>
+Annie: Hey there little guy!
+<<setFaceCode 0>>
+Annie: Well, I huess you do qualify for our "Kids Eat Free" promotion.
+<<setFaceCode 2>>
+Annie: ...what do goats eat? O think I've seen one eat a fence.
+<<setFaceCode 3>>
+Annie: Hey, here's a tin can! Thanks for coming!
+-> Take the tin can and leave
+-> Reveal yourself
+    Annie: I'm not a goat! I'm Cosmo, an extraterrestrial from B3-0ND!
+===
+
+title: Menu
+---
+-> Burger - $$$
+-> Fries - $$
+-> Milkshake - $
+-> Water - free
+-> No thanks
+===
+
+title: FreeMenu
+---
+-> Burger - free!
+-> Fries - free!
+-> Milkshake - free!
+-> Water - free!
+-> No thanks
+===
