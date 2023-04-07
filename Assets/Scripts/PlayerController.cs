@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         x_input = Input.GetAxisRaw("Horizontal");
         y_input = Input.GetAxisRaw("Vertical");
 
-        Move();
+        ProcessMovement();
         CamMove();
     }
     #endregion
@@ -122,10 +122,39 @@ public class PlayerController : MonoBehaviour
             PlayerRB.velocity = Vector2.zero;
         }
     }
-    #endregion
 
-    #region Camera Movements
-    public void CamMove()
+    void ProcessMovement()
+    {
+        float inputX = Input.GetAxisRaw("Horizontal");
+        float inputY = Input.GetAxisRaw("Vertical");
+
+        Vector2 direction = new Vector2(inputX, inputY);
+        transform.Translate(direction * Time.deltaTime * movespeed);
+
+        animationController.SetFloat("SpeedX", inputX);
+        animationController.SetFloat("SpeedY", inputY);
+        if (inputX != 0 || inputY != 0)
+        {
+
+            animationController.SetBool("Walking", true);
+        }
+        else
+        {
+            animationController.SetBool("Walking", false);
+        }
+        if (inputX > 0)
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+    }
+        #endregion
+
+        #region Camera Movements
+        public void CamMove()
     {
         Vector3 newPos;
         Vector3 playerPos = transform.position;
