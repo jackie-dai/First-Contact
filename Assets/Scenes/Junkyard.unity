@@ -446,6 +446,10 @@ PrefabInstance:
       propertyPath: map
       value: 
       objectReference: {fileID: 1931398786}
+    - target: {fileID: 546210293, guid: 55de06affd96c7c4587ef8a8b775144a, type: 3}
+      propertyPath: movespeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4151894255942364592, guid: 55de06affd96c7c4587ef8a8b775144a, type: 3}
       propertyPath: m_Name
       value: Cosmos
