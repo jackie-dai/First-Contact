@@ -17,4 +17,8 @@ public class Flyer : MonoBehaviour
 
         Debug.Log("Near Flyer!");
     }
+    public void act()
+    {
+        Debug.Log("wooo we are acting");
+    }
 }

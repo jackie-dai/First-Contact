@@ -51,5 +51,15 @@ public class Player : MonoBehaviour
         {
             transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
         }
-    } 
+    }
+
+    //handles items
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("trigger");
+        if (collision.gameObject.CompareTag("Flyer"))
+        {
+            collision.gameObject.GetComponent<Flyer>().act(); 
+        }
+    }
 }
