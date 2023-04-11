@@ -62,4 +62,12 @@ public class Player : MonoBehaviour
             collision.gameObject.GetComponent<Flyer>().act(); 
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Debug.Log("untrigger");
+        if (collision.gameObject.CompareTag("Flyer"))
+        {
+            collision.gameObject.GetComponent<Flyer>().unact();
+        }
+    }
 }
