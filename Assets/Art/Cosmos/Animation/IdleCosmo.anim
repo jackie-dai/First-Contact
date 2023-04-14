@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HorizontalWalkGoat
+  m_Name: IdleCosmo
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: b0943b066ebaf2849856c41521d00558, type: 3}
+      value: {fileID: 21300000, guid: a1f3e41a6d5cdbb439379cd9bf8ff357, type: 3}
     - time: 0.083333336
-      value: {fileID: 21300000, guid: ab9468b7b60e4974eaa597f7f57fa1a7, type: 3}
+      value: {fileID: 21300000, guid: edd4c3a72d2d41c4aa43885e747bf46e, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 851600ae3c4a9c44ca100b73d49109b1, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: 207147a80b4d1024d9be775d7b880b72, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,14 +46,16 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: b0943b066ebaf2849856c41521d00558, type: 3}
-    - {fileID: 21300000, guid: ab9468b7b60e4974eaa597f7f57fa1a7, type: 3}
+    - {fileID: 21300000, guid: a1f3e41a6d5cdbb439379cd9bf8ff357, type: 3}
+    - {fileID: 21300000, guid: edd4c3a72d2d41c4aa43885e747bf46e, type: 3}
+    - {fileID: 21300000, guid: 851600ae3c4a9c44ca100b73d49109b1, type: 3}
+    - {fileID: 21300000, guid: 207147a80b4d1024d9be775d7b880b72, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.16666667
+    m_StopTime: 0.33333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

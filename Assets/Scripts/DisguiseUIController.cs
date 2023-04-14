@@ -45,6 +45,7 @@ public class DisguiseUIController : MonoBehaviour
     {
         SceneManager.UnloadScene("disguise");
         PlayerController.playerController.gameObject.SetActive(true);
+        PlayerController.exitMenu = true;
     }
     #endregion
 
