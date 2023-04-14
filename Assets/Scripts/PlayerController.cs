@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController playerController;
+    public static bool exitMenu = false;
     #region Movement_vars
     public Transform playerTransform;
     public GameObject map;
@@ -42,6 +43,11 @@ public class PlayerController : MonoBehaviour
     private Animator animationController;
     #endregion
 
+    #region Audio Var
+    [SerializeField]
+    private AudioSource menuCloseSFX;
+    #endregion
+
     #region Unity_functions
     private void Awake()
     {
@@ -71,11 +77,20 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("dialogue");
         }
 
+        if (Input.GetKeyDown("m"))
+        {
+            SceneManager.LoadScene("Minimap");
+        }
+
         x_input = Input.GetAxisRaw("Horizontal");
         y_input = Input.GetAxisRaw("Vertical");
 
         ProcessMovement();
         CamMove();
+        if (exitMenu)
+        {
+            playMenuCloseSFX();
+        }
     }
     #endregion
 
@@ -195,6 +210,14 @@ public class PlayerController : MonoBehaviour
         {
             onDoor = false;
         }
+    }
+    #endregion
+
+    #region Audio Methods
+    private void playMenuCloseSFX()
+    {
+        menuCloseSFX.Play();
+        exitMenu = false;
     }
     #endregion
 }
