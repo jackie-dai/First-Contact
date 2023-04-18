@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float movementSpeed = 10f;
 
+    private float speed;
+
     private SpriteRenderer spriteRenderer;
     #region Animation
     private Animator animationController;
@@ -17,6 +19,7 @@ public class Player : MonoBehaviour
     {
         animationController = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        speed = movementSpeed;
     }
 
     // Update is called once per frame
@@ -53,6 +56,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void stopMovement()
+    {
+        movementSpeed = 0;
+    }
+    public void restartMovement()
+    {
+        movementSpeed = speed;
+    }
     //handles items
     private void OnTriggerEnter2D(Collider2D collision)
     {
