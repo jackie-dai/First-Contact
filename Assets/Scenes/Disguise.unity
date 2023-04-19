@@ -999,7 +999,6 @@ MonoBehaviour:
   startDisguise: {fileID: 4151894255942364592, guid: 55de06affd96c7c4587ef8a8b775144a, type: 3}
   parent: {fileID: 1657452717}
   defaultDisguise: {fileID: 7241227058256367500, guid: 015063304afe3b548a8c49b7b896c94e, type: 3}
-  exitSFX: {fileID: 754954661}
 --- !u!4 &754954660
 Transform:
   m_ObjectHideFlags: 0

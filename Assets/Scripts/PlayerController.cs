@@ -72,6 +72,12 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Disguise", LoadSceneMode.Additive);
         }
 
+        if (Input.GetKeyDown("i"))
+        {
+            this.gameObject.SetActive(false);
+            SceneManager.LoadScene("Inventory", LoadSceneMode.Additive);
+        }
+
         if (onDoor && Input.GetKeyDown("e"))
         {
             SceneManager.LoadScene("dialogue");
