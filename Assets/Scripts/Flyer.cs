@@ -61,7 +61,7 @@ public class Flyer : MonoBehaviour
     {
         Debug.Log("inside examine");
         //makes it so we can't move
-        Cosmos.GetComponent<Player>().stopMovement();
+        Cosmos.GetComponent<PlayerController>().stopMovement();
         //allows us to see stuff
         FlyerDisplay.SetActive(true);
         
@@ -73,7 +73,7 @@ public class Flyer : MonoBehaviour
     void exitExamine()
     {
         Debug.Log("exit examine");
-        Cosmos.GetComponent<Player>().restartMovement();
+        Cosmos.GetComponent<PlayerController>().restartMovement();
         MapMessage.SetActive(true);
         FlyerDisplay.SetActive(false);
         currentlyExamining = false;

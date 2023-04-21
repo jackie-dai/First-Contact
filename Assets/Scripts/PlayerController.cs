@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     float x_input;
     float y_input;
     Vector2 currDirection;
+    bool moving;
     #endregion
 
     #region Cam_vars
@@ -61,7 +62,10 @@ public class PlayerController : MonoBehaviour
         camHeight = 2 * cc_camera.orthographicSize;
         camWidth = cc_camera.aspect * camHeight;
 
+        moving = true;
+
         PlayerRB = GetComponent<Rigidbody2D>();
+       
     }
 
     private void Update()
@@ -103,6 +107,11 @@ public class PlayerController : MonoBehaviour
     #region Movement_funcs
     private void Move()
     {
+        if (!moving)
+        {
+            return;
+        }
+
         animationController.SetFloat("SpeedX", x_input);
         animationController.SetFloat("SpeedY", y_input);
         if (x_input != 0 || y_input != 0)
@@ -172,6 +181,16 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
     }
+
+    public void stopMovement()
+    {
+        moving = false; 
+    }
+
+    public void restartMovement()
+    {
+        moving = true;
+    }
         #endregion
 
         #region Camera Movements
@@ -207,6 +226,10 @@ public class PlayerController : MonoBehaviour
         {
             onDoor = true;
         }
+        if (collider.gameObject.CompareTag("Flyer"))
+        {
+            collider.gameObject.GetComponent<Flyer>().act();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collider)
@@ -215,6 +238,10 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Door"))
         {
             onDoor = false;
+        }
+        if (collider.gameObject.CompareTag("Flyer"))
+        {
+            collider.gameObject.GetComponent<Flyer>().unact();
         }
     }
     #endregion
