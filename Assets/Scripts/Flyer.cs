@@ -53,6 +53,8 @@ public class Flyer : MonoBehaviour
     public void unact()
     {
         inRange= false;
+        //bad coding 
+        needExamineMessage = true;
         ExamineMessage.SetActive(false);
         Debug.Log("we have left!");
         FlyerDisplay.SetActive(false);

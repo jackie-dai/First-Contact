@@ -107,10 +107,6 @@ public class PlayerController : MonoBehaviour
     #region Movement_funcs
     private void Move()
     {
-        if (!moving)
-        {
-            return;
-        }
 
         animationController.SetFloat("SpeedX", x_input);
         animationController.SetFloat("SpeedY", y_input);
@@ -155,6 +151,11 @@ public class PlayerController : MonoBehaviour
 
     void ProcessMovement()
     {
+        if (!moving)
+        {
+            return;
+        }
+
         float inputX = Input.GetAxisRaw("Horizontal");
         float inputY = Input.GetAxisRaw("Vertical");
 

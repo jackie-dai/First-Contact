@@ -334,7 +334,12 @@ MonoBehaviour:
   ExamineMessage: {fileID: 666315017}
   FlyerDisplay: {fileID: 587687693}
   MapMessage: {fileID: 272938618}
-  Cosmos: {fileID: 0}
+  Cosmos: {fileID: 172872217}
+--- !u!1 &172872217 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4151894255942364592, guid: 55de06affd96c7c4587ef8a8b775144a, type: 3}
+  m_PrefabInstance: {fileID: 578996474}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &218387309
 GameObject:
   m_ObjectHideFlags: 0
