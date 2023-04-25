@@ -466,9 +466,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7971d26f156e0448a99b9c6f1200a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExamineMessage: {fileID: 0}
-  FlyerDisplay: {fileID: 0}
-  MapMessage: {fileID: 0}
+  numStepsRequired: 5
+  MovementInstructions: {fileID: 1948077333}
+  ExamineMessage: {fileID: 1861033688}
+  FlyerDisplay: {fileID: 1347667198}
+  MapMessage: {fileID: 2024956826}
   Cosmos: {fileID: 172872217}
 --- !u!1 &172872217 stripped
 GameObject:
@@ -639,11 +641,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4151894255942364595, guid: 55de06affd96c7c4587ef8a8b775144a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9
+      value: 22.29
       objectReference: {fileID: 0}
     - target: {fileID: 4151894255942364595, guid: 55de06affd96c7c4587ef8a8b775144a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.6
+      value: 7.35
       objectReference: {fileID: 0}
     - target: {fileID: 4151894255942364595, guid: 55de06affd96c7c4587ef8a8b775144a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1695,10 +1697,24 @@ EdgeCollider2D:
   - {x: 20.318808, y: -1.6605196}
   - {x: 17.784792, y: -6.634565}
   - {x: 10.982569, y: -10.052582}
-  - {x: 15.714563, y: -14.268451}
-  - {x: 7.857292, y: -15.35564}
-  - {x: 17.829369, y: -21.221539}
-  - {x: 21.910158, y: -27.853752}
+  - {x: 10.974363, y: -11.691724}
+  - {x: 13.7174225, y: -10.94576}
+  - {x: 13.1271515, y: -12.200751}
+  - {x: 15.065908, y: -12.807677}
+  - {x: 15.33272, y: -13.886607}
+  - {x: 12.519478, y: -14.380125}
+  - {x: 10.722296, y: -13.40634}
+  - {x: 7.952753, y: -14.782876}
+  - {x: 6.6881638, y: -16.90987}
+  - {x: 8.16776, y: -16.99962}
+  - {x: 11.502069, y: -16.319897}
+  - {x: 13.782198, y: -18.429111}
+  - {x: 16.64717, y: -21.585293}
+  - {x: 17.277525, y: -24.405872}
+  - {x: 14.295639, y: -25.365608}
+  - {x: 16.362907, y: -26.944366}
+  - {x: 13.474649, y: -28.67448}
+  - {x: 12.122889, y: -32.15269}
   - {x: 17.86921, y: -35.71161}
   - {x: -48.065475, y: -35.13305}
   - {x: -48.579872, y: 9.688094}

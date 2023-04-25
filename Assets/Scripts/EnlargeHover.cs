@@ -31,7 +31,7 @@ public class EnlargeHover : MonoBehaviour
     {
         if (transform.tag == "Junkyard")
         {
-            SceneManager.LoadScene("Junkyard");
+            SceneManager.LoadScene("Junkyard 1");
         }
         if (transform.tag == "diner")
         {

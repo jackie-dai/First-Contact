@@ -9,6 +9,9 @@ public class Flyer : MonoBehaviour
     bool inRange;
     bool needExamineMessage;
     bool currentlyExamining;
+    float numSteps;
+    [SerializeField] float numStepsRequired = 5;
+    public GameObject MovementInstructions;
     public GameObject ExamineMessage;
     public GameObject FlyerDisplay;
     public GameObject MapMessage;
@@ -20,6 +23,7 @@ public class Flyer : MonoBehaviour
         inRange = false;
         needExamineMessage = true;
         currentlyExamining= false;
+        MovementInstructions.SetActive(true);
         ExamineMessage.SetActive(false);
         FlyerDisplay.SetActive(false);
         MapMessage.SetActive(false);
@@ -28,6 +32,7 @@ public class Flyer : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        walking();
         if (inRange && Input.GetKeyDown(KeyCode.X))
         {
             if (!currentlyExamining)
@@ -40,6 +45,19 @@ public class Flyer : MonoBehaviour
         }
     }
  
+    private void walking()
+    {   
+        if(numSteps >= numStepsRequired)
+        {
+            MovementInstructions.SetActive(false);
+            return;
+        }
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            numSteps++;
+        }
+    }
+
     public void act()
     {
         if (needExamineMessage)
@@ -47,6 +65,7 @@ public class Flyer : MonoBehaviour
             ExamineMessage.SetActive(true);
             needExamineMessage = false;
         }
+        MapMessage.SetActive(false);
         inRange = true;
         Debug.Log("wooo we are acting");
     }

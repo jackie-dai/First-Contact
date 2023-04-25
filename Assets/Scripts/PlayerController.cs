@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour
         mapHeight = map.GetComponent<SpriteRenderer>().bounds.size.y;
         mapPosition = map.transform.position;
 
+        onDoor = false;
+
         cc_camera = Camera.main;
         camHeight = 2 * cc_camera.orthographicSize;
         camWidth = cc_camera.aspect * camHeight;
