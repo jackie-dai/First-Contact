@@ -87,6 +87,7 @@ public class Flyer : MonoBehaviour
         FlyerDisplay.SetActive(true);
         
         ExamineMessage.SetActive(false);
+        MapMessage.SetActive(false);
         //tells us our next 'x' press will exit examine
         currentlyExamining = true;
         

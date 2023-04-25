@@ -233,6 +233,10 @@ public class PlayerController : MonoBehaviour
         {
             collider.gameObject.GetComponent<Flyer>().act();
         }
+        if (collider.gameObject.CompareTag("Money"))
+        {
+            collider.gameObject.GetComponent<MoneyTutorial>().Enter();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collider)
@@ -245,6 +249,10 @@ public class PlayerController : MonoBehaviour
         if (collider.gameObject.CompareTag("Flyer"))
         {
             collider.gameObject.GetComponent<Flyer>().unact();
+        }
+        if (collider.gameObject.CompareTag("Money"))
+        {
+            collider.gameObject.GetComponent<MoneyTutorial>().Unenter();
         }
     }
     #endregion
