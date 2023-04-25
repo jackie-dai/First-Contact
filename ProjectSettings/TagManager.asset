@@ -8,6 +8,7 @@ TagManager:
   - diner
   - Flyer
   - Door
+  - Money
   layers:
   - Default
   - TransparentFX

@@ -20,7 +20,7 @@ public class DisguiseTutorial : MonoBehaviour
     void Update()
     {
         counting();
-        if(count > 5)
+        if(count >= 2)
         {
             tab.SetActive(false);
         }

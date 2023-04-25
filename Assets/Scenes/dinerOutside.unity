@@ -327,11 +327,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4151894255942364595, guid: 55de06affd96c7c4587ef8a8b775144a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.49
+      value: 8.21
       objectReference: {fileID: 0}
     - target: {fileID: 4151894255942364595, guid: 55de06affd96c7c4587ef8a8b775144a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.74
+      value: -8.87
       objectReference: {fileID: 0}
     - target: {fileID: 4151894255942364595, guid: 55de06affd96c7c4587ef8a8b775144a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -379,9 +379,10 @@ GameObject:
   - component: {fileID: 395315444}
   - component: {fileID: 395315443}
   - component: {fileID: 395315442}
+  - component: {fileID: 395315446}
   m_Layer: 0
   m_Name: inv_$$$ bill
-  m_TagString: Untagged
+  m_TagString: Money
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -492,6 +493,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &395315446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395315441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dda56a025de09647903bae08f1f83a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  E: {fileID: 1600945217}
+  I: {fileID: 13145628}
 --- !u!1 &404007777
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +837,7 @@ GameObject:
   - component: {fileID: 1133173901}
   - component: {fileID: 1133173903}
   - component: {fileID: 1133173902}
+  - component: {fileID: 1133173904}
   m_Layer: 5
   m_Name: Tab
   m_TagString: Untagged
@@ -946,6 +962,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133173900}
   m_CullTransparentMesh: 1
+--- !u!114 &1133173904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133173900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 040013d4493ecd84fb82119834f203ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tab: {fileID: 1133173900}
 --- !u!1 &1600945217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1286,7 @@ GameObject:
   - component: {fileID: 1912832886}
   - component: {fileID: 1912832885}
   - component: {fileID: 1912832884}
+  - component: {fileID: 1912832887}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door
@@ -1357,6 +1387,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1912832887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912832883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b63754ffe9bd004d852cf7952252416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  E: {fileID: 2079335085}
+  I: {fileID: 13145628}
 --- !u!1 &1993982844
 GameObject:
   m_ObjectHideFlags: 0

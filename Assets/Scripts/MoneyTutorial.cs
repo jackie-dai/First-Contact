@@ -34,7 +34,7 @@ public class MoneyTutorial : MonoBehaviour
 
     public void Unenter()
     {
-        inside = false;
+        E.SetActive(false);
     }
     public void PickedUp() 
     {

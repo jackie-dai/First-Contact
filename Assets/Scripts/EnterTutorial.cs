@@ -6,6 +6,7 @@ public class EnterTutorial : MonoBehaviour
 {
     BoxCollider2D area;
     public GameObject E;
+    public GameObject I;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,14 @@ public class EnterTutorial : MonoBehaviour
         
     }
 
-    void display()
+    public void display()
     {
         E.SetActive(true);
+        I.SetActive(false);
+    }
+
+    public void undisplay()
+    {
+        E.SetActive(false);
     }
 }

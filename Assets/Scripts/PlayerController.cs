@@ -228,6 +228,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Door"))
         {
             onDoor = true;
+            collider.gameObject.GetComponent<EnterTutorial>().display();
         }
         if (collider.gameObject.CompareTag("Flyer"))
         {
@@ -245,6 +246,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Door"))
         {
             onDoor = false;
+            collider.gameObject.GetComponent<EnterTutorial>().undisplay();
         }
         if (collider.gameObject.CompareTag("Flyer"))
         {
