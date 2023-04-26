@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public Transform playerTransform;
     public GameObject map;
     public float movespeed;
+    public GameObject UI;
     float x_input;
     float y_input;
     Vector2 currDirection;
@@ -67,7 +68,7 @@ public class PlayerController : MonoBehaviour
         moving = true;
 
         PlayerRB = GetComponent<Rigidbody2D>();
-       
+
     }
 
     private void Update()
@@ -116,7 +117,8 @@ public class PlayerController : MonoBehaviour
         {
 
             animationController.SetBool("Walking", true);
-        } else
+        }
+        else
         {
             animationController.SetBool("Walking", false);
         }
@@ -126,7 +128,8 @@ public class PlayerController : MonoBehaviour
             PlayerRB.velocity = Vector2.right * movespeed;
             currDirection = Vector2.right;
 
-        } else if (x_input < 0)
+        }
+        else if (x_input < 0)
         {
             PlayerRB.velocity = Vector2.left * movespeed;
             currDirection = Vector2.left;
@@ -144,7 +147,7 @@ public class PlayerController : MonoBehaviour
             PlayerRB.velocity = Vector2.down * movespeed;
             currDirection = Vector2.down;
 
-        } 
+        }
         else
         {
             PlayerRB.velocity = Vector2.zero;
@@ -187,32 +190,34 @@ public class PlayerController : MonoBehaviour
 
     public void stopMovement()
     {
-        moving = false; 
+        moving = false;
     }
 
     public void restartMovement()
     {
         moving = true;
     }
-        #endregion
+    #endregion
 
-        #region Camera Movements
-        public void CamMove()
+    #region Camera Movements
+    public void CamMove()
     {
         Vector3 newPos;
         Vector3 playerPos = transform.position;
         newPos = playerPos;
-        if (playerPos.x + (camWidth/2) > mapPosition.x + (mapWidth/2))
+        if (playerPos.x + (camWidth / 2) > mapPosition.x + (mapWidth / 2))
         {
-            newPos.x = playerPos.x - playerPos.x - (camWidth / 2) + mapPosition.x + (mapWidth / 2); 
-        } else if (playerPos.x - (camWidth/2) < mapPosition.x - (mapWidth/2))
+            newPos.x = playerPos.x - playerPos.x - (camWidth / 2) + mapPosition.x + (mapWidth / 2);
+        }
+        else if (playerPos.x - (camWidth / 2) < mapPosition.x - (mapWidth / 2))
         {
             newPos.x = playerPos.x + mapPosition.x - (mapWidth / 2) - playerPos.x + (camWidth / 2);
         }
-        if (playerPos.y + (camHeight/2) > mapPosition.y + (mapHeight/2))
+        if (playerPos.y + (camHeight / 2) > mapPosition.y + (mapHeight / 2))
         {
             newPos.y = playerPos.y - playerPos.y - (camHeight / 2) + mapPosition.y + (mapHeight / 2);
-        } else if (playerPos.y - (camHeight / 2) < mapPosition.y - (mapHeight / 2))
+        }
+        else if (playerPos.y - (camHeight / 2) < mapPosition.y - (mapHeight / 2))
         {
             newPos.y = playerPos.y + mapPosition.y - (mapHeight / 2) - playerPos.y + (camHeight / 2);
         }
@@ -257,6 +262,13 @@ public class PlayerController : MonoBehaviour
             collider.gameObject.GetComponent<MoneyTutorial>().Unenter();
         }
     }
+
+    private void OnMouseDown()
+    {
+           UI.GetComponent<OverheadUI>().appear();
+        
+    }
+
     #endregion
 
     #region Audio Methods
@@ -266,4 +278,5 @@ public class PlayerController : MonoBehaviour
         exitMenu = false;
     }
     #endregion
+
 }

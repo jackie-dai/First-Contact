@@ -29,6 +29,9 @@ public class MoneyTutorial : MonoBehaviour
         }   
     }
 
+    //have to exit area and press e. /maybe when picking 
+    //files in inventory ui controller
+
     public void Enter()
     {
         Debug.Log("entered");
