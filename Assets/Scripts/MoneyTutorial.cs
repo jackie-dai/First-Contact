@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Subsystems;
 
 public class MoneyTutorial : MonoBehaviour
 {
@@ -20,14 +21,17 @@ public class MoneyTutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("updating");
         if(inside && Input.GetKeyDown(KeyCode.E))
         {
+            Debug.Log("update work");
             PickedUp();
         }   
     }
 
     public void Enter()
     {
+        Debug.Log("entered");
         E.SetActive (true);
         inside = true;    
     }
@@ -38,6 +42,7 @@ public class MoneyTutorial : MonoBehaviour
     }
     public void PickedUp() 
     {
+        Debug.Log("we know its been picked up");
         E.SetActive (false);
         I.SetActive (true);
     }
