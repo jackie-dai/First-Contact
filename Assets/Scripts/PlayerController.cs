@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Yarn.Unity;
 
 
 public class PlayerController : MonoBehaviour
@@ -84,7 +85,8 @@ public class PlayerController : MonoBehaviour
 
         if (onDoor && Input.GetKeyDown("e"))
         {
-            SceneManager.LoadScene("dialogue");
+            DialogueManager.DM.setDialogueCode(1);
+            SceneManager.LoadScene("Annie", LoadSceneMode.Additive);
         }
 
         if (Input.GetKeyDown("m"))
@@ -254,4 +256,6 @@ public class PlayerController : MonoBehaviour
         exitMenu = false;
     }
     #endregion
+
+    
 }
