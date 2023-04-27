@@ -30,6 +30,7 @@ public class Flyer : MonoBehaviour
     {
         if (inRange && Input.GetKeyDown(KeyCode.X))
         {
+            EnlargeHover.unlockedDiner = true;
             if (!currentlyExamining)
             {
                 examine();
