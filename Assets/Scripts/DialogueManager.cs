@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     [YarnFunction("getDialogue")]
     public static int getDialogue() 
     {
+        EnlargeHover.unlockedToby = true;
         return dialogueCode;
     }
 

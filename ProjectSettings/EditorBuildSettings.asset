@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Inventory.unity
     guid: 197a6a97e53ebf849a7e4aefff2972fd
+  - enabled: 1
+    path: Assets/Scenes/Toby.unity
+    guid: 73a16035d2c07cc479c05de627bb0dbb
   m_configObjects: {}
