@@ -28,6 +28,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1396129114223624293, guid: 9ce193fde5236314d932c0ba2d40b046, type: 3}
     - target: {fileID: 8627650395072006080, guid: a4be74e5c21fb644686e7c03767772b3, type: 3}
+      propertyPath: Overhead
+      value: 
+      objectReference: {fileID: 9191300501012489287, guid: 39dfea010f2ef6e46b7d7d74c12d957d, type: 3}
+    - target: {fileID: 8627650395072006080, guid: a4be74e5c21fb644686e7c03767772b3, type: 3}
       propertyPath: UIPrefab
       value: 
       objectReference: {fileID: 81577881525986933, guid: c9049f4621d855a448fdc1c34809bc36, type: 3}

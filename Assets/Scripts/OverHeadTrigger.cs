@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OverHeadTrigger : MonoBehaviour
 {
@@ -32,23 +33,27 @@ public class OverHeadTrigger : MonoBehaviour
         {
             Debug.Log("hovering over Quit");
         }
-
     }
 
-    private void OnMouseDown()
+    void OnMouseDown()
     {
         Debug.Log("hovering");
         if (gameObject.CompareTag("Inventory"))
         {
             Debug.Log("Clicked on Inventory");
+            this.GetComponentInParent<OverheadUI>().playerTransform.SetActive(false);
+            SceneManager.LoadScene("Inventory", LoadSceneMode.Additive);
         }
         if (gameObject.CompareTag("Disguise"))
         {
             Debug.Log("Clicked on Disguise");
+            this.GetComponentInParent<OverheadUI>().playerTransform.SetActive(false);
+            SceneManager.LoadScene("Disguise", LoadSceneMode.Additive);
         }
         if (gameObject.CompareTag("Quit"))
         {
             Debug.Log("Clicked to Quit");
+            this.GetComponentInParent<OverheadUI>().overheadUI.SetActive(false);
         }
         Debug.Log("pressed");
     }

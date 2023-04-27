@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public Transform playerTransform;
     public GameObject map;
     public float movespeed;
-    public GameObject UI;
+    public GameObject Overhead;
     float x_input;
     float y_input;
     Vector2 currDirection;
@@ -70,9 +70,15 @@ public class PlayerController : MonoBehaviour
         PlayerRB = GetComponent<Rigidbody2D>();
 
     }
+    private void Start()
+    {
+        
+        GameObject.FindGameObjectWithTag("Overhead").GetComponent<OverheadUI>().SetPlayer(GetComponent<PlayerController>().gameObject);
+    }
 
     private void Update()
     {
+        setPlayer();
         if (Input.GetKeyDown("tab"))
         {
             this.gameObject.SetActive(false);
@@ -104,6 +110,14 @@ public class PlayerController : MonoBehaviour
         {
             playMenuCloseSFX();
         }
+    }
+
+    #endregion
+
+    #region communication
+    public void setPlayer()
+    {
+        Overhead.GetComponent<OverheadUI>().SetPlayer(GetComponent<PlayerController>().gameObject);
     }
     #endregion
 
@@ -265,7 +279,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnMouseDown()
     {
-           UI.GetComponent<OverheadUI>().appear();
+           Overhead.GetComponent<OverheadUI>().appear();
         
     }
 

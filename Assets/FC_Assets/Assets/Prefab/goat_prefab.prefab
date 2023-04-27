@@ -28,6 +28,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1396129114223624293, guid: 9ce193fde5236314d932c0ba2d40b046, type: 3}
     - target: {fileID: 8627650395072006080, guid: a4be74e5c21fb644686e7c03767772b3, type: 3}
+      propertyPath: Overhead
+      value: 
+      objectReference: {fileID: 9191300501012489287, guid: 39dfea010f2ef6e46b7d7d74c12d957d, type: 3}
+    - target: {fileID: 8627650395072006080, guid: a4be74e5c21fb644686e7c03767772b3, type: 3}
       propertyPath: UIPrefab
       value: 
       objectReference: {fileID: 4080051075680657555, guid: f2d2ddf7f7268a14cb023403f2f38c80, type: 3}
@@ -135,6 +139,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f454ae8f7ea908b4da18d257b17373ea, type: 3}
+    - target: {fileID: 8627650395072006093, guid: a4be74e5c21fb644686e7c03767772b3, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8627650395072006094, guid: a4be74e5c21fb644686e7c03767772b3, type: 3}
       propertyPath: m_Size.x
       value: 0.7469395

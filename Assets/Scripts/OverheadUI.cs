@@ -19,18 +19,27 @@ public class OverheadUI : MonoBehaviour
     {
         //sp = GetComponent<SpriteRenderer>();
         //sp.enabled = false;
+        if (playerTransform)
+        {
+            playerPos = playerTransform.transform.position;
+            overheadUI.SetActive(false);
 
-        playerPos = playerTransform.transform.position;
-        overheadUI.SetActive(false);
-
-        offset = new Vector3(0, yOffset,0);
+            offset = new Vector3(0, yOffset, 0);
+        }
     }
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this); 
+    }
     // Update is called once per frame
     void Update()
     {
-        playerPos = playerTransform.transform.position;
-        ourTransform.position = playerPos + offset;
+        if (overheadUI && playerTransform)
+        {
+            playerPos = playerTransform.transform.position;
+            ourTransform.position = playerPos + offset;
+        }
         //Debug.Log("working in update" + playerPos.x + " " + playerPos.y);
     }
 
@@ -45,5 +54,9 @@ public class OverheadUI : MonoBehaviour
     {
         //sp.enabled = false;
         overheadUI.SetActive(false);
+    }
+    public void SetPlayer(GameObject arg)
+    {
+        playerTransform = arg;
     }
 }

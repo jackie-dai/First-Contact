@@ -12,6 +12,7 @@ TagManager:
   - Inventory
   - Disguise
   - Quit
+  - Overhead
   layers:
   - Default
   - TransparentFX

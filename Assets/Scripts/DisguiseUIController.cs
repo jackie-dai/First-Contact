@@ -38,7 +38,11 @@ public class DisguiseUIController : MonoBehaviour
     public void ChangeDisguise(GameObject Disguise)
     {
         Destroy(currentDisguise.gameObject);
+       
         currentDisguise = Instantiate(Disguise, parent.transform);
+
+        if (GameObject.FindWithTag("Player")) { Debug.Log("true"); }
+        //GameObject.FindWithTag("Player").GetComponent<PlayerController>().setPlayer();
     }
 
     public void exitScene()
