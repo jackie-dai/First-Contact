@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class EnlargeHover : MonoBehaviour
 {
     public static bool unlockedDiner = false;
+    public static bool unlockedToby = false;
+    public static bool unlockedVan = false;
     #region Animation variables
     private float animationDuration = 0.20f;
     private float scaleModifier = 1f;
@@ -38,7 +40,7 @@ public class EnlargeHover : MonoBehaviour
         {
             SceneManager.LoadScene("dinerOutside");
         }
-        if (transform.tag == "toby")
+        if (transform.tag == "toby" && unlockedToby)
         {
             DialogueManager.DM.setDialogueCode(2);
             SceneManager.LoadScene("Toby");
@@ -48,7 +50,7 @@ public class EnlargeHover : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (transform.tag == "diner")
+        if (transform.tag == "diner") 
         {
             if (unlockedDiner)
             {
@@ -56,7 +58,23 @@ public class EnlargeHover : MonoBehaviour
                 outline.gameObject.SetActive(true);
                 spriteRenderer.enabled = false;
             }
-        } else
+        } else if (transform.tag == "toby")
+        {
+            if (unlockedToby)
+            {
+                transform.localScale = targetSize;
+                outline.gameObject.SetActive(true);
+                spriteRenderer.enabled = false;
+            }
+        } else if (transform.tag == "van")
+        {
+            if (unlockedVan)
+            {
+                transform.localScale = targetSize;
+                outline.gameObject.SetActive(true);
+                spriteRenderer.enabled = false;
+            }
+        } else 
         {
             transform.localScale = targetSize;
             outline.gameObject.SetActive(true);

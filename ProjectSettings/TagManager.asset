@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Junkyard
   - diner
+  - Flyer
+  - toby
+  - van
   layers:
   - Default
   - TransparentFX
