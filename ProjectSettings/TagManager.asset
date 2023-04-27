@@ -9,6 +9,7 @@ TagManager:
   - Flyer
   - toby
   - van
+  - Door
   layers:
   - Default
   - TransparentFX
