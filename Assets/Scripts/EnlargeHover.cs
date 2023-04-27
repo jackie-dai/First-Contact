@@ -37,6 +37,11 @@ public class EnlargeHover : MonoBehaviour
         {
             SceneManager.LoadScene("dinerOutside");
         }
+        if (transform.tag == "toby")
+        {
+            DialogueManager.DM.setDialogueCode(2);
+            SceneManager.LoadScene("Toby");
+        }
         Debug.Log("SDF");
     }
 

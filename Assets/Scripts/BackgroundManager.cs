@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.SceneManagement;
 
 public class BackgroundManager : MonoBehaviour
 {
@@ -25,14 +26,20 @@ public class BackgroundManager : MonoBehaviour
     [Tooltip("happy face, faceCode = 3")]
     private GameObject happyFace;
 
+    [SerializeField]
+    [Tooltip("current scene name")]
+    private string sceneName;
+
     #region 
     private GameObject currentFace;
     static int faceCode;
+    static bool finished;
     #endregion
 
     void Awake()
     {
         faceCode = 0;
+        finished = false;
         currentFace = Instantiate(normalFace, parent.transform);
     }
 
@@ -58,6 +65,10 @@ public class BackgroundManager : MonoBehaviour
             Destroy(currentFace.gameObject);
             currentFace = Instantiate(happyFace, parent.transform);
         }
+        if (finished)
+        {
+            SceneManager.UnloadScene(sceneName);
+        }
     }
 
     #region Yarn Functions
@@ -74,4 +85,10 @@ public class BackgroundManager : MonoBehaviour
         faceCode = newCode;
     }
     #endregion
+
+    [YarnCommand("exitScene")]
+    public static void exitScene() 
+    { 
+        finished = true;
+    }
 }

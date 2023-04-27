@@ -1,0 +1,10 @@
+﻿title: Start
+tags:
+---
+<<if getDialogue() == 1>>
+    <<jump Annie>>
+<<endif>>
+<<if getDialogue() == 2>>
+    <<jump Toby>>
+<<endif>>
+===

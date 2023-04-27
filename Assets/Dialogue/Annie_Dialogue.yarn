@@ -1,4 +1,4 @@
-title: Start
+title: Annie
 tags:
 ---
 Annie: Welcome to Skates n' Shakes! What can I get for you?
@@ -21,20 +21,79 @@ Annie: Oh -um... nice costume?
 <<setFaceCode 0>>
 -> Play along carefully
     Cosmo: Thank you! I made it myself.
--> Play along casually
-    Cosmo: Thanks! You too
-    Annie: ...Right. Let me grab a menu for you.
-    <<jump Menu>>
+    Annie: Wow, I really thought you were an alien for a second.
+    Annie: If Toby sees this he would freak out
+    Annie: He thinks the goverment are working with aliens to control people's mind
+    Cosmo: Where is this Toby?
+    Annie: He lives in the blue house with radars all over the roof
+    Annie: I think he's trying to intercept some secret government message
+    -> Leave Diner
+        Cosmo: Alrighty, thanks for the heads up!
+        Cosmo: Nice to meet you, Annie!
+        <<exitScene>>
 -> Reveal yourself
     Cosmo: This isn't a costume!
     Cosmo: I'm Cosmo, an extraterrestrial from B3-0ND!
-    Annie: ...Right. Let me grab a menu for you.
-    <<jump Menu>>
+    <<setFaceCode 1>>
+    Annie: We don't get much aliens around here
+    <<setFaceCode 0>>
+    Annie: Will you should be carefull around Toby
+    Annie: He thinks you guys are secretly working with government to control people's mind
+    Cosmo: Okay... thanks for the heads up!
+    Cosmo: Where is this Toby?
+    Annie: He lives in the blue house with radars all over the roof
+    Annie: I think he's looking for evidences to proof his mind control theory
+    -> Leave Diner
+        Cosmo: Alrighty, I need to take off
+        Cosmo: Nice to meet you, Annie!
+        <<exitScene>>
 ===
 
 title: Boy
 ---
-<<jump FreeMenu>>
+Cosmo: Hello! I'm a normal boy who just moved into this town!
+<<setFaceCode 3>>
+Annie: Hello! My name is Annie
+<<setFaceCode 0>>
+Annie: We don't get a lot of new comers around here, what's your name?
+-> Play along carefully
+    Cosmo: Uhh... Dave?
+    Annie: Hello, Dave
+    Annie: Do you need something to eat?
+    Cosmo: I'm fine, thank you
+    Cosmo: I'm just trying to get to know the people here
+    Annie: Oh I see
+    Annie: In that case, could you help me with something?
+    -> Yes
+        Cosmo: Sure!
+        Annie: We need to deliver a pizza to Toby
+        Annie: He lives in the blue house with radars all over the roof
+        Cosmo: Why does he have radar on the roof?
+        Annie: He thinks the goverment are working with aliens to control people's mind
+        Annie: I think he's trying to intercept some secret government message
+        Cosmo: Okay, I'll see it done!
+        Annie: Thank you so much!
+        <<exitScene>>
+    -> No
+        Cosmo: Sorry I'm busy exploring town
+        Annie: That's alright, thanks for coming!
+        <<exitScene>>
+-> Reveal yourself
+    Cosmo: I'm not a boy! I'm Cosmo, an extraterrestrial from B3-0ND!
+    <<setFaceCode 1>>
+    Annie: We don't get much aliens around here
+    <<setFaceCode 0>>
+    Annie: Will you should be carefull around Toby
+    Annie: He thinks you guys are secretly working with government to control people's mind
+    Cosmo: Okay... thanks for the heads up!
+    Cosmo: Where is this Toby?
+    Annie: He lives in the blue house with radars all over the roof
+    Annie: I think he's looking for evidences to proof his mind control theory
+    -> Leave Diner
+        Cosmo: Alrighty, I need to take off
+        Cosmo: Nice to meet you, Annie!
+        <<exitScene>>
+
 ===
 
 title: Goat
@@ -44,14 +103,30 @@ Annie: Oh-
 <<setFaceCode 3>>
 Annie: Hey there little guy!
 <<setFaceCode 0>>
-Annie: Well, I huess you do qualify for our "Kids Eat Free" promotion.
+Annie: Well, I guess you do qualify for our "Kids Eat Free" promotion.
 <<setFaceCode 2>>
 Annie: ...what do goats eat? O think I've seen one eat a fence.
 <<setFaceCode 3>>
-Annie: Hey, here's a tin can! Thanks for coming!
+Annie: Hey, here's a tin can! 
+Annie: Tobby would be thrilled if he see this
+Annie: He would have said the goat is an alien's diguise to blend in
 -> Take the tin can and leave
+    <<exitScene>>
 -> Reveal yourself
-    Annie: I'm not a goat! I'm Cosmo, an extraterrestrial from B3-0ND!
+    Cosmo: I'm not a goat! I'm Cosmo, an extraterrestrial from B3-0ND!
+    <<setFaceCode 1>>
+    Annie: We don't get much aliens around here
+    <<setFaceCode 0>>
+    Annie: Will you should be carefull around Toby
+    Annie: He thinks you guys are secretly working with government to control people's mind
+    Cosmo: Okay... thanks for the heads up!
+    Cosmo: Where is this Toby?
+    Annie: He lives in the blue house with radars all over the roof
+    Annie: I think he's looking for evidences to proof his mind control theory
+    -> Leave Diner
+        Cosmo: Alrighty, I need to take off
+        Cosmo: Nice to meet you, Annie!
+        <<exitScene>>
 ===
 
 title: Menu
