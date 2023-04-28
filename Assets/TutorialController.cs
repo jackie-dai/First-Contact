@@ -48,6 +48,8 @@ public class TutorialController : MonoBehaviour
     public void examineMessage()
     {
         Examine.SetActive(true);
+        Exit.SetActive(false);
+        Enter.SetActive(false);
     }
 
     public void pickedUpMoney()
