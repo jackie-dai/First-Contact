@@ -9,6 +9,7 @@ public class TutorialController : MonoBehaviour
     public GameObject Examine;
     public GameObject Enter;
     public GameObject I;
+    public GameObject Exit;
 
     float count;
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class TutorialController : MonoBehaviour
         Examine.SetActive(false);
         Enter.SetActive(false);
         I.SetActive(false);
+        Exit.SetActive(false);
 
         count = 0;
     }
@@ -54,5 +56,12 @@ public class TutorialController : MonoBehaviour
     {
         Enter.SetActive(true);
         I.SetActive(false);
+    }
+
+    public void exitMessage()
+    {
+        Exit.SetActive(true);
+        Debug.Log("set Exit active, set Enter inactive");
+        Enter.SetActive(false);
     }
 }

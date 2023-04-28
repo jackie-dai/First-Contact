@@ -85,6 +85,7 @@ public class PlayerController : MonoBehaviour
 
         if (onDoor && Input.GetKeyDown("e"))
         {
+            GameObject.FindGameObjectWithTag("Door").GetComponent<TutorialController>().exitMessage();
             DialogueManager.DM.setDialogueCode(1);
             SceneManager.LoadScene("Annie", LoadSceneMode.Additive);
         }
