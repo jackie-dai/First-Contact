@@ -4,6 +4,7 @@ tags:
 <<setFaceCode 1>>
 Toby: Who's that on the door?
 Toby: Show yourself!
+<<setFaceCode 0>>
 Cosmo to himself: What disguise should I wear?
 -> No Disguise
     <<jump Alien_toby>>
