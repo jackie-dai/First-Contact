@@ -2,8 +2,94 @@
 tags:
 ---
 <<setFaceCode 1>>
-Cosmo: What disguise should I wear?
+Toby: Who's that on the door?
+Toby: Show yourself!
+Cosmo to himself: What disguise should I wear?
 -> No Disguise
+    <<jump Alien_toby>>
 -> Boy
+    <<jump Boy_toby>>
 -> Goat
+    <<jump Goat_toby>>
+===
+
+title: Alien_toby
+tags:
+---
+Toby: Oh my god!
+Toby: You are an alien!
+-> Hide your identity
+    Cosmo: No... It's just a costume...
+    Toby: I don't believe you, take it off, let me see your face!
+    -> Change to boy disguise
+        Cosmo: See, I'm just a boy
+        Toby: Okay...
+        Toby: listen kid, don't think this is funny
+        Toby: I think the govenment is working with aliens to get into our heads
+        Cosmo: Why would they want to do that?
+        Toby: So when aliens take over, no body would resist!
+        Cosmo: No, I don't think the aliens would want to take over
+        Cosmo: They are nice people
+        Toby: That's what they want you to think!
+        <<jump the_end>>
+    -> Be honest
+        Cosmo: fine, you got me
+        Cosmo: I'm Cosmo, an extraterrestrial from B3-0ND
+        Toby: I knew it! You are working with the govenment to secretly control people!
+        Developer: Toby took a shot gun and shot you, you are dead
+        <<jump the_end>>
+-> Be honest
+    Cosmo: I'm Cosmo, an extraterrestrial from B3-0ND
+    Toby: I knew it! You are working with the govenment to secretly control people!
+    Developer: Toby took a shot gun and shot you, you are dead...
+        <<jump the_end>>
+===
+
+title: Boy_toby
+tags:
+---
+Toby: Hmmm, a little boy...
+Toby: What are you doing here?
+Cosmo: Hello, kind sir, I'm here to deliver your pizza
+Toby: Are you a spy from the government?
+-> Yes
+    Developer: Toby took a shot gun and shot you, you are dead...
+        <<jump the_end>>
+-> No
+    Cosmo: No, I'm not a spy, I'm just a normal boy
+    Toby: Okay kid, I believe you
+    Toby: Did you check the pizza for spy devices?
+    Cosmo: No, why would the government want to spy on you?
+    Toby: Because I'm onto them, I'm collecting evidences of them talking to aliens
+    Toby: They are helping aliens to take over the earth
+    Cosmo: Aliens wouldn't do that, they are all nice creatures
+    Toby: That's what they want you to think, you are brain washed!
+    Toby: Here's the money, take it and leave
+        <<jump the_end>>
+===
+
+title: Goat_toby
+tags:
+---
+-> Greet Toby
+    Cosmo: Hello, kind sir
+    Toby: Oh my god a talking goat!
+    Toby: You must be some sick secret government experiment!
+    Developer: Toby took a shot gun and shot you, you are dead...
+        <<jump the_end>>
+-> Make goat noises
+    Cosmo: Baaaaa~
+    Toby: What's going on?
+    Toby: A goat? Get lost, and don't bother me!
+    Toby: I have important stuff going on
+        <<jump the_end>>
+-> Stay Silent
+    Toby: A goat? Get lost, and don't bother me!
+    Toby: I have important stuff going on
+        <<jump the_end>>
+===
+
+title: the_end
+tags:
+---
 ===
