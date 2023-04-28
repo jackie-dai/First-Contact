@@ -34,6 +34,7 @@ public class BackgroundManager : MonoBehaviour
     private GameObject currentFace;
     static int faceCode;
     static bool finished;
+    static bool demoEnd;
     #endregion
 
     void Awake()
@@ -69,6 +70,10 @@ public class BackgroundManager : MonoBehaviour
         {
             SceneManager.UnloadScene(sceneName);
         }
+        if (demoEnd)
+        {
+            SceneManager.LoadScene("End");
+        }
     }
 
     #region Yarn Functions
@@ -90,5 +95,11 @@ public class BackgroundManager : MonoBehaviour
     public static void exitScene() 
     { 
         finished = true;
+    }
+
+    [YarnCommand("finishedDemo")]
+    public static void finishedDemo(bool finished) 
+    { 
+        demoEnd = finished;
     }
 }
