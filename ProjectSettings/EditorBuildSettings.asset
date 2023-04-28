@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Toby.unity
     guid: 73a16035d2c07cc479c05de627bb0dbb
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: 17211285dd6acff4f80e9b71c945d1f4
   m_configObjects: {}
