@@ -10,6 +10,7 @@ TagManager:
   - toby
   - van
   - Door
+  - Money
   layers:
   - Default
   - TransparentFX

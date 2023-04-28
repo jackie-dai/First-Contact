@@ -27,6 +27,7 @@ public class Flyer : MonoBehaviour
         FlyerDisplay.SetActive(false);
         MapMessage.SetActive(false);
         WalkMessage.SetActive(true);
+        count = 0;
     }
 
     // Update is called once per frame
@@ -48,7 +49,7 @@ public class Flyer : MonoBehaviour
         {
             count++;
         }
-        if(count >= 5)
+        if(count >= 3)
         {
             WalkMessage.SetActive(false);
         }
