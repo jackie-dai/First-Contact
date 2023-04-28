@@ -60,6 +60,7 @@ public class TutorialController : MonoBehaviour
     {
         Enter.SetActive(true);
         I.SetActive(false);
+        Examine.SetActive(false);
     }
 
     public void exitMessage()

@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
 
     #region UI_var
     public GameObject UIPrefab;
+
+    GameObject Door;
     #endregion
 
     #region Interaction Var
@@ -64,6 +66,8 @@ public class PlayerController : MonoBehaviour
         camWidth = cc_camera.aspect * camHeight;
 
         moving = true;
+
+        Door = GameObject.FindGameObjectWithTag("Door");
 
         PlayerRB = GetComponent<Rigidbody2D>();
        
@@ -235,7 +239,7 @@ public class PlayerController : MonoBehaviour
         {
             collider.gameObject.GetComponent<Flyer>().act();
         }
-        if (other.CompareTag("Money"))
+        if (other.CompareTag("Money") && !Door.GetComponent<TutorialController>().Exit.activeSelf)
         {
             collider.gameObject.GetComponent<TutorialController>().examineMessage();
         }

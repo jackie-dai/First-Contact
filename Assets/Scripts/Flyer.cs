@@ -22,7 +22,7 @@ public class Flyer : MonoBehaviour
         area = GetComponent<BoxCollider2D>();
         inRange = false;
         needExamineMessage = true;
-        currentlyExamining= false;
+        currentlyExamining = false;
         ExamineMessage.SetActive(false);
         FlyerDisplay.SetActive(false);
         MapMessage.SetActive(false);
@@ -39,7 +39,8 @@ public class Flyer : MonoBehaviour
             if (!currentlyExamining)
             {
                 examine();
-            } else
+            }
+            else
             {
                 exitExamine();
             }
@@ -49,15 +50,15 @@ public class Flyer : MonoBehaviour
         {
             count++;
         }
-        if(count >= 3)
+        if (count >= 3)
         {
             WalkMessage.SetActive(false);
         }
     }
- 
+
     bool walking()
     {
-        if(Input.GetKeyDown("a") || Input.GetKeyDown("s") || Input.GetKeyDown("d") || Input.GetKeyDown("w"))
+        if (Input.GetKeyDown("a") || Input.GetKeyDown("s") || Input.GetKeyDown("d") || Input.GetKeyDown("w"))
         {
             return true;
         }
@@ -77,7 +78,7 @@ public class Flyer : MonoBehaviour
     }
     public void unact()
     {
-        inRange= false;
+        inRange = false;
         //bad coding 
         needExamineMessage = true;
         ExamineMessage.SetActive(false);
@@ -90,12 +91,15 @@ public class Flyer : MonoBehaviour
         //makes it so we can't move
         Cosmos.GetComponent<PlayerController>().stopMovement();
         //allows us to see stuff
-        FlyerDisplay.SetActive(true);
-        
+        if (!MapMessage.activeSelf)
+        {
+            FlyerDisplay.SetActive(true);
+        }
+
         ExamineMessage.SetActive(false);
         //tells us our next 'x' press will exit examine
         currentlyExamining = true;
-        
+
     }
     void exitExamine()
     {
