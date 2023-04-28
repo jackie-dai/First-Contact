@@ -56,12 +56,14 @@ public class TutorialController : MonoBehaviour
     {
         Examine.SetActive(false);
         I.SetActive(true);
+        
     }
 
     public void enterMessage()
     {
         Enter.SetActive(true);
         I.SetActive(false);
+        Exit.SetActive(false);
         Examine.SetActive(false);
     }
 
@@ -70,5 +72,6 @@ public class TutorialController : MonoBehaviour
         Exit.SetActive(true);
         Debug.Log("set Exit active, set Enter inactive");
         Enter.SetActive(false);
+       
     }
 }
