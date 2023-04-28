@@ -55,6 +55,7 @@ public class TutorialController : MonoBehaviour
     public void pickedUpMoney()
     {
         Examine.SetActive(false);
+        Exit.SetActive(false);
         I.SetActive(true);
         
     }
