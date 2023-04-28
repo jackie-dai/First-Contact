@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
     #region Interaction Var
     bool onDoor;
+    bool openedDoor;
     #endregion 
 
     #region Animator Var
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour
         camWidth = cc_camera.aspect * camHeight;
 
         moving = true;
+        openedDoor = false;
 
         Door = GameObject.FindGameObjectWithTag("Door");
 
@@ -87,11 +89,12 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Inventory", LoadSceneMode.Additive);
         }
 
-        if (onDoor && Input.GetKeyDown("e"))
+        if (onDoor && Input.GetKeyDown("e") && !openedDoor)
         {
             GameObject.FindGameObjectWithTag("Door").GetComponent<TutorialController>().exitMessage();
             DialogueManager.DM.setDialogueCode(1);
             SceneManager.LoadScene("Annie", LoadSceneMode.Additive);
+            openedDoor = true;
         }
 
         if (Input.GetKeyDown("m"))
@@ -251,6 +254,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Door"))
         {
             onDoor = false;
+            openedDoor = false;
         }
         if (collider.gameObject.CompareTag("Flyer"))
         {
