@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 4151894255942364595}
-  map: {fileID: 0}
+  map: {fileID: 1396129114223624293, guid: 9ce193fde5236314d932c0ba2d40b046, type: 3}
   movespeed: 7
   UIPrefab: {fileID: 7241227058256367500, guid: 015063304afe3b548a8c49b7b896c94e, type: 3}
   menuCloseSFX: {fileID: 61697921}
