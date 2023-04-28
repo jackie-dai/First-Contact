@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bc7192542c58d034fbb3a14a0e5abe68
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Fleur De Leah
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9dbe3908b3af669449e98138b4c2bcec, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
