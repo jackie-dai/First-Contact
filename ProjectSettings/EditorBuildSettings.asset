@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: 097e0dbe0963f034cbbcf30e2ee01fa2
   - enabled: 1
     path: Assets/Scenes/Junkyard.unity
-    guid: d5f4cb2ba50aa4c44a25f1d27a762700
+    guid: a23a4e66714979146ae520f8c662944b
   - enabled: 1
     path: Assets/Scenes/dinerOutside.unity
     guid: f988ec624deaa984f9340dba63dd122e

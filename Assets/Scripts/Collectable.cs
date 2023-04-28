@@ -28,6 +28,8 @@ public class Collectable : MonoBehaviour
     {
         if (onPlayer && Input.GetKeyDown("e"))
         {
+
+            GetComponent<TutorialController>().pickedUpMoney();
             AddToInv();
         }
 

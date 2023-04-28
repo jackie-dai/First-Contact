@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class EnlargeHover : MonoBehaviour
 {
+    public static bool unlockedDiner = false;
+    public static bool unlockedToby = false;
+    public static bool unlockedVan = false;
     #region Animation variables
     private float animationDuration = 0.20f;
     private float scaleModifier = 1f;
@@ -33,11 +36,11 @@ public class EnlargeHover : MonoBehaviour
         {
             SceneManager.LoadScene("Junkyard");
         }
-        if (transform.tag == "diner")
+        if (transform.tag == "diner" && unlockedDiner)
         {
             SceneManager.LoadScene("dinerOutside");
         }
-        if (transform.tag == "toby")
+        if (transform.tag == "toby" && unlockedToby)
         {
             DialogueManager.DM.setDialogueCode(2);
             SceneManager.LoadScene("Toby");
@@ -47,11 +50,36 @@ public class EnlargeHover : MonoBehaviour
 
     void OnMouseEnter()
     {
-        Debug.Log("mouse isover");
-        transform.localScale = targetSize;
-        outline.gameObject.SetActive(true);
-        spriteRenderer.enabled = false;
-
+        if (transform.tag == "diner") 
+        {
+            if (unlockedDiner)
+            {
+                transform.localScale = targetSize;
+                outline.gameObject.SetActive(true);
+                spriteRenderer.enabled = false;
+            }
+        } else if (transform.tag == "toby")
+        {
+            if (unlockedToby)
+            {
+                transform.localScale = targetSize;
+                outline.gameObject.SetActive(true);
+                spriteRenderer.enabled = false;
+            }
+        } else if (transform.tag == "van")
+        {
+            if (unlockedVan)
+            {
+                transform.localScale = targetSize;
+                outline.gameObject.SetActive(true);
+                spriteRenderer.enabled = false;
+            }
+        } else 
+        {
+            transform.localScale = targetSize;
+            outline.gameObject.SetActive(true);
+            spriteRenderer.enabled = false;
+        }
     }
 
 
