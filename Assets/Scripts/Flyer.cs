@@ -13,6 +13,9 @@ public class Flyer : MonoBehaviour
     public GameObject FlyerDisplay;
     public GameObject MapMessage;
     public GameObject Cosmos;
+    public GameObject WalkMessage;
+
+    float count;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,8 @@ public class Flyer : MonoBehaviour
         ExamineMessage.SetActive(false);
         FlyerDisplay.SetActive(false);
         MapMessage.SetActive(false);
+        WalkMessage.SetActive(true);
+        count = 0;
     }
 
     // Update is called once per frame
@@ -39,12 +44,31 @@ public class Flyer : MonoBehaviour
                 exitExamine();
             }
         }
+
+        if (walking())
+        {
+            count++;
+        }
+        if(count >= 3)
+        {
+            WalkMessage.SetActive(false);
+        }
     }
  
+    bool walking()
+    {
+        if(Input.GetKeyDown("a") || Input.GetKeyDown("s") || Input.GetKeyDown("d") || Input.GetKeyDown("w"))
+        {
+            return true;
+        }
+        return false;
+    }
+
     public void act()
     {
-        if (needExamineMessage)
+        if (needExamineMessage && !MapMessage.activeSelf)
         {
+            MapMessage.SetActive(false);
             ExamineMessage.SetActive(true);
             needExamineMessage = false;
         }

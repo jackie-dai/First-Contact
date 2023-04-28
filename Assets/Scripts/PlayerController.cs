@@ -85,6 +85,7 @@ public class PlayerController : MonoBehaviour
 
         if (onDoor && Input.GetKeyDown("e"))
         {
+            GameObject.FindGameObjectWithTag("Door").GetComponent<TutorialController>().exitMessage();
             DialogueManager.DM.setDialogueCode(1);
             SceneManager.LoadScene("Annie", LoadSceneMode.Additive);
         }
@@ -227,11 +228,16 @@ public class PlayerController : MonoBehaviour
         GameObject other = collider.gameObject;
         if (other.CompareTag("Door"))
         {
+            collider.gameObject.GetComponent<TutorialController>().enterMessage();
             onDoor = true;
         }
         if (collider.gameObject.CompareTag("Flyer"))
         {
             collider.gameObject.GetComponent<Flyer>().act();
+        }
+        if (other.CompareTag("Money"))
+        {
+            collider.gameObject.GetComponent<TutorialController>().examineMessage();
         }
     }
 

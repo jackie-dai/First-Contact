@@ -9,6 +9,8 @@ TagManager:
   - Flyer
   - toby
   - van
+  - Door
+  - Money
   layers:
   - Default
   - TransparentFX
