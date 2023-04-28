@@ -66,8 +66,9 @@ public class Flyer : MonoBehaviour
 
     public void act()
     {
-        if (needExamineMessage)
+        if (needExamineMessage && !MapMessage.activeSelf)
         {
+            MapMessage.SetActive(false);
             ExamineMessage.SetActive(true);
             needExamineMessage = false;
         }

@@ -27,6 +27,10 @@ public class TutorialController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(count == 0)
+        {
+            Tab.SetActive(true);
+        }
         if(count >= 3)
         {
             Tab.SetActive(false);
