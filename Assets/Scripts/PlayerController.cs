@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
 
     #region UI_var
     public GameObject UIPrefab;
+
+    GameObject Door;
     #endregion
 
     #region Interaction Var
@@ -65,6 +67,8 @@ public class PlayerController : MonoBehaviour
 
         moving = true;
 
+        Door = GameObject.FindGameObjectWithTag("Door");
+
         PlayerRB = GetComponent<Rigidbody2D>();
        
     }
@@ -85,6 +89,7 @@ public class PlayerController : MonoBehaviour
 
         if (onDoor && Input.GetKeyDown("e"))
         {
+            GameObject.FindGameObjectWithTag("Door").GetComponent<TutorialController>().exitMessage();
             DialogueManager.DM.setDialogueCode(1);
             SceneManager.LoadScene("Annie", LoadSceneMode.Additive);
         }
@@ -227,11 +232,16 @@ public class PlayerController : MonoBehaviour
         GameObject other = collider.gameObject;
         if (other.CompareTag("Door"))
         {
+            collider.gameObject.GetComponent<TutorialController>().enterMessage();
             onDoor = true;
         }
         if (collider.gameObject.CompareTag("Flyer"))
         {
             collider.gameObject.GetComponent<Flyer>().act();
+        }
+        if (other.CompareTag("Money") && !Door.GetComponent<TutorialController>().Exit.activeSelf)
+        {
+            collider.gameObject.GetComponent<TutorialController>().examineMessage();
         }
     }
 
